@@ -1,0 +1,28 @@
+/* styles.css */
+*{
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 20px;
+    background-color: #f1dede; /* Set the background color */
+    color: #333; /* Set the text color */
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333; /* Set the color of the heading */
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 15px;
+}
+
+.uid {
+    font-weight: bold;
+    color: #000; /* Set the color of the UID text */
+}
