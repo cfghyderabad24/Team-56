@@ -1,24 +1,28 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'; // Changed Switch to Routes
 
-function App() {
+import Appbar from './components/Appbar';
+import Entry from './components/Entry';
+
+import Student from './components/Student';
+function App({ store }) {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="App">
+        <div className="App-body">
+          <Appbar store={store} />
+          <Routes> {/* Changed Switch to Routes */}
+           
+           
+            <Route path="/entry" element={<Entry />} />
+            <Route path="/student" element={<Student />} />
+          {/* Changed exact to element */}
+          </Routes> {/* Changed Switch to Routes */}
+        
+        </div>
+      </div>
+    </Router>
   );
 }
 
