@@ -102,3 +102,12 @@ nav ul li a.active, nav ul li a:hover {
     left: 0;
     border-radius: 50% 50% 0 0;
 }
+
+.horizontal-scroll {
+    overflow-x: auto;
+    white-space: nowrap; /* Prevents text from wrapping */
+}
+
+.horizontal-scroll > * {
+    display: inline-block; /* Allows items to be displayed horizontally */
+}
