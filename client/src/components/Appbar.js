@@ -17,7 +17,7 @@ import { Link } from 'react-router-dom'; // Import Link for routing
 
 
 
-const pages = [];
+const pages = ['Home', 'Login', 'Registration', 'Entry', 'Student', 'Admission', 'ViewData','OtpMail'];
 
 const settings = ['Profile', 'Entry', 'Detail', 'Logout'];
 
