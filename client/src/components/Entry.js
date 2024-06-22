@@ -10,6 +10,7 @@ import InputLabel from '@mui/material/InputLabel';
 import FormControl from '@mui/material/FormControl';
 import axios from 'axios';
 import AppointmentDetails from './AppointmentDetails';
+import './Entry.css'; // Import the CSS file
 
 const Entry = () => {
   const [isFormValid, setIsFormValid] = useState(false);
@@ -73,20 +74,20 @@ const Entry = () => {
   }, []);
 
   return (
-    <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh', marginTop: '20px' }}>
+    <div className="container">
       {appointmentDetails ? (
         <AppointmentDetails appointmentDetails={appointmentDetails} />
       ) : (
-        <Paper elevation={10} sx={{ padding: 2, display: 'flex', flexDirection: 'column', alignItems: 'center', width: '90%', maxWidth: '400px', marginTop: '40px', maxHeight: '90vh', overflow: 'auto' }}>
-          <Typography variant="h6" gutterBottom style={{ textAlign: 'center', marginTop: '10px' }}>
+        <Paper elevation={10} className="paper">
+          <Typography variant="h6" gutterBottom className="title">
             Survey Form
           </Typography>
           <form onSubmit={handleSubmit} onChange={handleInputChange}>
             {/* Parent Information */}
-            <TextField label="Parent's Name" fullWidth margin="normal" required name="parentName" id="parentName" />
+            <TextField label="Parent's Name" className="textField" required name="parentName" id="parentName" />
             
             {/* Gender Dropdown */}
-            <FormControl fullWidth margin="normal" required>
+            <FormControl className="formControl" required>
               <InputLabel>Disability</InputLabel>
               <Select label="Disability" name="gender" id="gender">
                 <MenuItem value="male">Yes</MenuItem>
@@ -94,15 +95,15 @@ const Entry = () => {
               </Select>
             </FormControl>
             
-            <TextField label="Age" type="number" fullWidth margin="normal"  id="age" />
-            <TextField label="Mobile" type="tel" fullWidth margin="normal"  id="mobile" />
+            <TextField label="Age" type="number" className="textField" id="age" />
+            <TextField label="Mobile" type="tel" className="textField" id="mobile" />
             
             {/* Student Information */}
-            <TextField label="Income" fullWidth margin="normal" required name="studentId" id="studentId" />
-            <TextField label="Area" fullWidth margin="normal"  id="studentName" />
+            <TextField label="Income" className="textField" required name="studentId" id="studentId" />
+            <TextField label="Area" className="textField" id="studentName" />
             
             {/* Department Dropdown */}
-            <FormControl fullWidth margin="normal" red>
+            <FormControl className="formControl">
               <InputLabel>Disability information</InputLabel>
               <Select label="Department" name="department" id="department">
                 <MenuItem value="CSE-H">Autistic</MenuItem>
@@ -118,21 +119,19 @@ const Entry = () => {
             </FormControl>
             
             {/* Visit Details */}
-            <TextField label="Donations" fullWidth margin="normal" id="purpose" />
-            <TextField type="date" fullWidth margin="normal" required name="date" id="date" />
+            <TextField label="Donations" className="textField" id="purpose" />
+            <TextField type="date" className="textField" required name="date" id="date" />
             
-
             <input
               type="file"
               accept=".pdf"
-              style={{ marginTop: '10px', padding: '6px', backgroundColor: 'white', border: 'none', borderRadius: '4px' }}
+              className="fileInput"
               required
               name="file"
               id="file"
             />
             <Box mt={2}>
-        
-              <Button variant="contained" color="secondary" onClick={handleUpdate} style={{ marginLeft: '10px' }}>
+              <Button variant="contained" color="secondary" onClick={handleUpdate} className="submitButton">
                 Submit
               </Button>
             </Box>
@@ -144,3 +143,5 @@ const Entry = () => {
 };
 
 export default Entry;
+
+

@@ -10,6 +10,7 @@ import InputLabel from '@mui/material/InputLabel';
 import FormControl from '@mui/material/FormControl';
 import axios from 'axios';
 import AppointmentDetails from './AppointmentDetails';
+import './Admission.css';
 
 const Entry = () => {
   const [isFormValid, setIsFormValid] = useState(false);
@@ -79,18 +80,18 @@ const Entry = () => {
       ) : (
         <Paper elevation={10} sx={{ padding: 2, display: 'flex', flexDirection: 'column', alignItems: 'center', width: '90%', maxWidth: '400px', marginTop: '40px', maxHeight: '90vh', overflow: 'auto' }}>
           <Typography variant="h6" gutterBottom style={{ textAlign: 'center', marginTop: '10px' }}>
-            Entry Form
+            Admission
           </Typography>
           <form onSubmit={handleSubmit} onChange={handleInputChange}>
             {/* Parent Information */}
-            <TextField label="Parent's Name" fullWidth margin="normal" required name="parentName" id="parentName" />
+            <TextField label="Name" fullWidth margin="normal" required name="parentName" id="parentName" />
             
             {/* Gender Dropdown */}
             <FormControl fullWidth margin="normal" required>
-              <InputLabel>Gender</InputLabel>
+              <InputLabel>Income less than 2.5lakhs</InputLabel>
               <Select label="Gender" name="gender" id="gender">
-                <MenuItem value="male">Male</MenuItem>
-                <MenuItem value="female">Female</MenuItem>
+                <MenuItem value="male">Yes</MenuItem>
+                <MenuItem value="female">No</MenuItem>
               </Select>
             </FormControl>
             
@@ -102,28 +103,27 @@ const Entry = () => {
 
             {/* Student Information */}
             <TextField label="Student ID" fullWidth margin="normal" required name="studentId" id="studentId" />
-            <TextField label="Student Name" fullWidth margin="normal" required name="studentName" id="studentName" />
+            <TextField label="Parent income" fullWidth margin="normal" required name="studentName" id="studentName" />
             
             {/* Department Dropdown */}
             <FormControl fullWidth margin="normal" required>
-              <InputLabel>Department</InputLabel>
+              <InputLabel>Course for teaching</InputLabel>
               <Select label="Department" name="department" id="department">
-                <MenuItem value="CSE-H">CSE-H</MenuItem>
-                <MenuItem value="CSE-R">CSE-R</MenuItem>
-                <MenuItem value="CS&IT">CS&IT</MenuItem>
-                <MenuItem value="ECE">ECE</MenuItem>
-                <MenuItem value="EEE">EEE</MenuItem>
-                <MenuItem value="CIVIL">CIVIL</MenuItem>
-                <MenuItem value="MECH">MECH</MenuItem>
-                <MenuItem value="IOT">IOT</MenuItem>
-                <MenuItem value="AI&DS">AI&DS</MenuItem>
+                <MenuItem value="CSE-H">Autistic</MenuItem>
+                <MenuItem value="CSE-R">Down Syndrome</MenuItem>
+                <MenuItem value="CS&IT">Visual Impairment</MenuItem>
+                <MenuItem value="ECE">Hearing Impairment</MenuItem>
+                <MenuItem value="EEE">Intelectual Disability</MenuItem>
+                <MenuItem value="CIVIL">Deaf Blindness</MenuItem>
+                <MenuItem value="MECH">Emotional Disturbance</MenuItem>
+                <MenuItem value="IOT">Mental Illness</MenuItem>
+                <MenuItem value="AI&DS">Mental Retardation</MenuItem>
               </Select>
             </FormControl>
             
             {/* Visit Details */}
-            <TextField label="Purpose of Visit" fullWidth margin="normal" required name="purpose" id="purpose" />
-            <TextField type="date" fullWidth margin="normal" required name="date" id="date" />
-            <TextField type="time" fullWidth margin="normal" required name="time" id="time" />
+            <TextField label="Certificates" fullWidth margin="normal" required name="purpose" id="purpose" />
+            
 
             <input
               type="file"
@@ -134,11 +134,9 @@ const Entry = () => {
               id="file"
             />
             <Box mt={2}>
-              <Button variant="contained" color="primary" type="submit" disabled={!isFormValid}>
-                Save Data
-              </Button>
+              
               <Button variant="contained" color="secondary" onClick={handleUpdate} style={{ marginLeft: '10px' }}>
-                Update Data
+                Save Data
               </Button>
             </Box>
           </form>
