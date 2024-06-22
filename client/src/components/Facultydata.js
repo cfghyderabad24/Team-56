@@ -6,7 +6,7 @@ export default function Student() {
   const [result, setResult] = useState(null);
 
   useEffect(() => {
-    axios.get('http://localhost:8081/disp').then((response) => {
+    axios.get('http://localhost:8081/d').then((response) => {
       console.log(response.data);
       setResult(response.data);
     });
@@ -14,14 +14,14 @@ export default function Student() {
 
   function handleDelete(event) {
     const studentId = event.currentTarget.getAttribute("data-student");
-    axios.delete('http://localhost:8081/del', {
+    axios.delete('http://localhost:8081/de', {
       params: {
         id: studentId
       }
     }).then((response) => {
       console.log(response.data);
       // Refresh the data after delete
-      axios.get('http://localhost:8081/disp').then((response) => {
+      axios.get('http://localhost:8081/d').then((response) => {
         setResult(response.data);
       });
     });
