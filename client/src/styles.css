@@ -4,7 +4,7 @@ body {
 }
 
 header {
-    background-color: #3b79ff;
+    background-color: #214f87;
     padding: 20px 0;
 }
 
@@ -53,10 +53,9 @@ nav ul li a.active, nav ul li a:hover {
 }
 
 .hero {
-    background-color: #3b3bff;
-    color: #fff;
-    padding: 100px 0;
-    position: relative;
+    background-image:url("https://img.theweek.in/content/dam/week/leisure/society/images/2018/12/13/disabled-shutterstock.jpg" );
+    background-repeat:no-repeat;
+    background-size: cover;
 }
 
 .hero .container {
