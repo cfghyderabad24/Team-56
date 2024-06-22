@@ -15,7 +15,10 @@ import MenuItem from '@mui/material/MenuItem';
 import Swal from 'sweetalert2'; // Import SweetAlert2
 import { Link } from 'react-router-dom'; // Import Link for routing
 
-const pages = [];
+
+
+const pages = ['Home', 'Login', 'Registration', 'Entry', 'Student', 'Admission', 'ViewData','OtpMail'];
+
 const settings = ['Profile', 'Entry', 'Detail', 'Logout'];
 
 function ResponsiveAppBar({ store }) {

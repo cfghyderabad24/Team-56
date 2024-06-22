@@ -13,6 +13,10 @@ export default function NavReducer(state=initState, action){
             return "Error";
         case "Student":
             return "Student";
+        case "Admission":
+            return "Admission";
+        case "ViewData":
+            return "ViewData";
    
         default:
             return "Login";

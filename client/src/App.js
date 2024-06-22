@@ -5,7 +5,9 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'; // Ch
 import Appbar from './components/Appbar';
 import Entry from './components/Entry';
 
+import Admission from './components/Admission';
 import Student from './components/Student';
+import ViewData from './components/ViewData';
 function App({ store }) {
   return (
     <Router>
@@ -16,6 +18,9 @@ function App({ store }) {
            
            
             <Route path="/entry" element={<Entry />} />
+            <Route path="/view" element={<ViewData />} />
+           
+            <Route path="/admission" element={<Admission />} />
             <Route path="/student" element={<Student />} />
           {/* Changed exact to element */}
           </Routes> {/* Changed Switch to Routes */}
