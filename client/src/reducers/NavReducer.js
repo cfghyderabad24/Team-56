@@ -18,6 +18,8 @@ export default function NavReducer(state=initState, action){
         case "ViewData":
             return "ViewData";
    
+        case "Home":
+            return "Home";
         default:
             return "Login";
     }

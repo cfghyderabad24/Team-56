@@ -11,11 +11,14 @@ import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
-import AdbIcon from '@mui/icons-material/CarRental';
+//import AdbIcon from '@mui/icons-material/CarRental';
 import Swal from 'sweetalert2'; // Import SweetAlert2
 import { Link } from 'react-router-dom'; // Import Link for routing
 
+
+
 const pages = ['Home', 'Login', 'Registration', 'Entry', 'Student', 'Admission', 'ViewData','OtpMail'];
+
 const settings = ['Profile', 'Entry', 'Detail', 'Logout'];
 
 function ResponsiveAppBar({ store }) {
@@ -60,7 +63,10 @@ function ResponsiveAppBar({ store }) {
     <AppBar position="static" sx={{ backgroundColor: 'MidnightBlue' }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
+          {/* <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} /> */} 
+          <span>
+            <img src="https://subhiksha.org/wp-content/uploads/2024/01/logo.png" alt="Subiksha" width="500" height="600"/>
+          </span>
           <Typography
             variant="h6"
             noWrap
@@ -76,7 +82,7 @@ function ResponsiveAppBar({ store }) {
               textDecoration: 'none',
             }}
           >
-            Automobile Management System
+            Subhiksha Voluntary Organisation
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
@@ -115,7 +121,7 @@ function ResponsiveAppBar({ store }) {
               ))}
             </Menu>
           </Box>
-          <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
+          {/* <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} /> */}
           <Typography
             variant="h5"
             noWrap
