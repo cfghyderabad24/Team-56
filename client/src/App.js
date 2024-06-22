@@ -4,7 +4,6 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'; // Ch
 
 import Appbar from './components/Appbar';
 import Entry from './components/Entry';
-import Home from './components/Home';
 import Admission from './components/Admission';
 import Student from './components/Student';
 import Home from './components/Home';

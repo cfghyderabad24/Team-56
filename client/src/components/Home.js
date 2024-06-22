@@ -4,10 +4,7 @@ import './styles.css';
 const HomePage = () => {
     return (
         <div>
-<<<<<<< HEAD
-        
-=======
->>>>>>> 7696a5f4d025768ae56b33947f34b2d76f860999
+
             <section className="hero">
                 <div className="container">
                     <div className="hero-text">
