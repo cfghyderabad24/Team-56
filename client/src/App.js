@@ -25,13 +25,8 @@ function App({ store }) {
             <Route path="/home" element={<Home />} />
 
             <Route path="/view" element={<ViewData />} />
-<<<<<<< HEAD
             <Route path="/faculty" element={<Faculty />} />
-            <Route path="/facultydata" element={<Facultydata />} />
-=======
-            <Route path="/home" element={<Home />} />
->>>>>>> 7696a5f4d025768ae56b33947f34b2d76f860999
-           
+            <Route path="/facultydata" element={<Facultydata />} />           
             <Route path="/admission" element={<Admission />} />
             <Route path="/student" element={<Student />} />
           {/* Changed exact to element */}
