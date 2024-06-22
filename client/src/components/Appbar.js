@@ -15,7 +15,7 @@ import AdbIcon from '@mui/icons-material/CarRental';
 import Swal from 'sweetalert2'; // Import SweetAlert2
 import { Link } from 'react-router-dom'; // Import Link for routing
 
-const pages = ['Home', 'Login', 'Registration', 'Entry', 'Student', 'Shop', 'SendMail','OtpMail'];
+const pages = ['Home', 'Login', 'Registration', 'Entry', 'Student', 'Admission', 'ViewData','OtpMail'];
 const settings = ['Profile', 'Entry', 'Detail', 'Logout'];
 
 function ResponsiveAppBar({ store }) {
