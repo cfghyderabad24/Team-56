@@ -1,13 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Benefits for Specially Disabled People in India</title>
-    <link rel="stylesheet" href="./Home/styles.css">
-</head>
-<body>
-    <h1>Benefits for Specially Disabled People in India</h1>
+import React from 'react';
+import NavBar from './navbar';
+import './styles.css';
+
+const HomePage = () => {
+    return (
+        <div>
+            <NavBar/>
+            <h1>Benefits for Specially Disabled People in India</h1>
     <ul>
         <li>
             <span class="uid">Disability Pension:</span> Financial assistance is provided through schemes like the Indira Gandhi National Disability Pension Scheme (IGNDPS) to disabled individuals below the poverty line.
@@ -46,5 +45,8 @@
             <span class="uid">Health and Medical Facilities:</span> Free or subsidized medical facilities, including surgeries and therapies, through government hospitals and health schemes.
         </li>
     </ul>
-</body>
-</html>
+        </div>
+    );
+}
+
+export default HomePage;
