@@ -79,7 +79,7 @@ const Entry = () => {
       ) : (
         <Paper elevation={10} sx={{ padding: 2, display: 'flex', flexDirection: 'column', alignItems: 'center', width: '90%', maxWidth: '400px', marginTop: '40px', maxHeight: '90vh', overflow: 'auto' }}>
           <Typography variant="h6" gutterBottom style={{ textAlign: 'center', marginTop: '10px' }}>
-            Entry Form
+            Survey Form
           </Typography>
           <form onSubmit={handleSubmit} onChange={handleInputChange}>
             {/* Parent Information */}
