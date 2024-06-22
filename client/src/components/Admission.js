@@ -103,7 +103,7 @@ const Entry = () => {
 
             {/* Student Information */}
             <TextField label="Student ID" fullWidth margin="normal" required name="studentId" id="studentId" />
-            <TextField label="Parent income" fullWidth margin="normal" required name="studentName" id="studentName" />
+            
             
             {/* Department Dropdown */}
             <FormControl fullWidth margin="normal" required>
