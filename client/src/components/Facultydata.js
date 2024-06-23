@@ -66,7 +66,7 @@ export default function Student() {
               <th>Date</th>
               <th>Time</th>
               <th>File Name</th>
-              <th>Delete</th>
+              
             </tr>
           </thead>
           <tbody>
@@ -84,9 +84,7 @@ export default function Student() {
                 <td>{user.date}</td>
                 <td>{user.time}</td>
                 <td>{user.fileName}</td>
-                <td>
-                  <button onClick={handleDelete} data-student={user.studentId}>Delete</button>
-                </td>
+               
               </tr>
             ))}
           </tbody>

@@ -44,20 +44,22 @@ const Entry = () => {
 
   const handleUpdate = () => {
     const formData = {
-      parentName: document.getElementById("parentName").value,
-      gender: document.getElementById("gender").value,
-      age: document.getElementById("age").value,
-      mobile: document.getElementById("mobile").value,
-      email: document.getElementById("email").value,
-      studentId: document.getElementById("studentId").value,
-      studentName: document.getElementById("studentName").value,
-      department: document.getElementById("department").value,
-      purpose: document.getElementById("purpose").value,
-      date: document.getElementById("date").value,
-      time: document.getElementById("time").value,
-      fileName: document.getElementById("file").files[0].name,
+      parentName: document.getElementById("parentName") ? document.getElementById("parentName").value : null,
+      gender: document.getElementById("gender") ? document.getElementById("gender").value: null,
+      age: document.getElementById("age") ? document.getElementById("age").value : null,
+      mobile: document.getElementById("mobile") ? document.getElementById("mobile").value : null,
+      email: document.getElementById("email") ?  document.getElementById("email").value : null,
+      studentId: document.getElementById("studentId") ? document.getElementById("studentId").value : null,
+      studentName: document.getElementById("studentName") ? document.getElementById("studentName").value : null,
+      department:document.getElementById("department") ?  document.getElementById("department").value : null,
+      purpose:document.getElementById("purpose") ?  document.getElementById("purpose").value : null,
+      date:document.getElementById("date") ?  document.getElementById("date").value : null,
+      time: document.getElementById("time") ? document.getElementById("time").value : null,
+      fileName: document.getElementById("file") ? document.getElementById("file").files[0].name : null,
     };
 
+    console.log(formData);
+    
     axios.put('http://localhost:8081/entry', formData).then((response) => {
       console.log(response.data);
     });
@@ -143,5 +145,3 @@ const Entry = () => {
 };
 
 export default Entry;
-
-

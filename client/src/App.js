@@ -1,42 +1,41 @@
-import React from 'react';
-import './App.css';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'; // Changed Switch to Routes
-
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Appbar from './components/Appbar';
 import Entry from './components/Entry';
-import Home from './components/Home';
+import Volunteer from './components/Volunteer';
 import Admission from './components/Admission';
 import Student from './components/Student';
 import Home from './components/Home';
 import Faculty from './components/Faculty';
 import ViewData from './components/ViewData';
 import Facultydata from './components/Facultydata';
+import Login from './components/Login';
+import Viewdatas from './components/Viewdatas';
+import Registration from './components/Registration';
+import Volunteerdata from './components/Volunteerdata';
+import Profile from './components/Profile';
 
-function App({ store }) {
+function App() {
   return (
     <Router>
       <div className="App">
         <div className="App-body">
-          <Appbar store={store} />
-          <Routes> {/* Changed Switch to Routes */}
-           
-           
+          <Appbar />
+          <Routes>
+            <Route path="/registration" element={<Registration />} />
+            <Route path="/login" element={<Login />} />
             <Route path="/entry" element={<Entry />} />
             <Route path="/home" element={<Home />} />
-
             <Route path="/view" element={<ViewData />} />
-<<<<<<< HEAD
             <Route path="/faculty" element={<Faculty />} />
             <Route path="/facultydata" element={<Facultydata />} />
-=======
-            <Route path="/home" element={<Home />} />
->>>>>>> 7696a5f4d025768ae56b33947f34b2d76f860999
-           
+            <Route path="/volunteer" element={<Volunteer />} />
+            <Route path="/volunteerdata" element={<Volunteerdata />} />
             <Route path="/admission" element={<Admission />} />
             <Route path="/student" element={<Student />} />
-          {/* Changed exact to element */}
-          </Routes> {/* Changed Switch to Routes */}
-        
+            <Route path="/viewdatas" element={<Viewdatas />} />
+            <Route path="/profile" element={<Profile />} />
+           
+          </Routes>
         </div>
       </div>
     </Router>

@@ -16,7 +16,7 @@ import Swal from 'sweetalert2'; // Import SweetAlert2
 import { Link } from 'react-router-dom'; // Import Link for routing
 
 
-const pages = ['Home',  'Registration', 'Entry', 'Student', 'Admission','Faculty','Facultydata','ViewData'];
+const pages = ['Home',  'Login','Registration', 'Entry', 'Student', 'Admission','Faculty','Facultydata','volunteer','Volunteerdata'];
 
 const settings = ['Profile', 'Entry', 'Detail', 'Logout'];
 
@@ -32,8 +32,10 @@ function ResponsiveAppBar({ store }) {
   };
 
   const handleCloseNavMenu = (event) => {
-    store.dispatch({ type: event.currentTarget.getAttribute("nav") })
-    setAnchorElNav(null);
+    if(store) {
+      store.dispatch({ type: event.currentTarget.getAttribute("nav") })
+      setAnchorElNav(null);
+    }
   };
 
   const handleCloseUserMenu = (event) => {

@@ -2,7 +2,7 @@ import React from 'react';
 import { Grid, Paper, Typography, Box, Table, TableBody, TableCell, TableContainer, TableHead, TableRow } from '@mui/material';
 import { Line } from 'react-chartjs-2';
 import { Chart as ChartJS, CategoryScale, LinearScale, BarElement, PointElement, LineElement } from 'chart.js';
-
+<StudentRemarksVisualisation firstName={entry.firstName} lastName={entry.lastName} data={entry.remarks} />
 ChartJS.register(CategoryScale, LinearScale, BarElement, PointElement, LineElement);
 
 function getDaysInMonth(month, year) {

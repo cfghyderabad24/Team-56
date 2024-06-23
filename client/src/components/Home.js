@@ -1,31 +1,28 @@
 import React from 'react';
-import './styles.css';
+import './styles.css'; // Assuming you have a styles.css file for additional styles
 
-const HomePage = () => {
-    return (
-        <div>
-<<<<<<< HEAD
-        
-=======
->>>>>>> 7696a5f4d025768ae56b33947f34b2d76f860999
-            <section className="hero">
-                <div className="container">
-                    <div className="hero-text">
-                        <h1>"Disability is not a barrier to capability; it's an opportunity to showcase extraordinary strength."</h1>
-                        <p>Together, we can turn challenges into triumphs, doubts into determination, and disabilities into capabilities</p>
-                    </div>
-                    <div className="hero-image">
-                        <div className="horizontal-scroll">
-                            <img src="https://wecapable.com/wp-content/uploads/2017/05/stephen-hawking-wecapable.jpg" alt="Image 1" />
-                            <img src="https://give.do/blog/wp-content/uploads/2021/12/Disability-NGO.jpg" alt="Image 2" />
-                            <img src="https://static.sadhguru.org/d/46272/1635531387-1635531386358.jpg" alt="Image 3" />
-                            {/* Add more images or content here */}
-                        </div>
-                    </div>
-                </div>
-            </section>
+const App = () => {
+  return (
+    <>
+     
+      <section className="hero">
+        <div className="container">
+          <div className="hero-text">
+            <h1>"Disability is not a barrier to capability; it's an opportunity to showcase extraordinary strength."</h1>
+            <p>Together, we can turn challenges into triumphs, doubts into determination, and disabilities into capabilities</p>
+          </div>
+          <div className="hero-image">
+            <div className="horizontal-scroll">
+              <img src="https://wecapable.com/wp-content/uploads/2017/05/stephen-hawking-wecapable.jpg" alt="Image 1" />
+              <img src="https://give.do/blog/wp-content/uploads/2021/12/Disability-NGO.jpg" alt="Image 2" />
+              <img src="https://static.sadhguru.org/d/46272/1635531387-1635531386358.jpg" alt="Image 3" />
+              {/* Add more images or content here */}
+            </div>
+          </div>
         </div>
-    );
+      </section>
+    </>
+  );
 }
 
-export default HomePage;
+export default App;

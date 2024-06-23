@@ -50,16 +50,15 @@ export default function Student() {
           <thead>
             <tr>
               <th>Parent's Name</th>
-              <th>Gender</th>
+              <th>Disability</th>
               <th>Age</th>
               <th>Mobile</th>
-              <th>Email</th>
-              <th>Student ID</th>
-              <th>Student Name</th>
-              <th>Department</th>
-              <th>Purpose of Visit</th>
+              
+              <th>Income</th>
+              <th>Area</th>
+              <th>Disability Information</th>
+              <th>Donations</th>
               <th>Date</th>
-              <th>Time</th>
               <th>File Name</th>
               <th>Delete</th>
             </tr>

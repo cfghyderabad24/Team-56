@@ -17,6 +17,7 @@ const col3 = db.collection("view");
 const col4 = db.collection("faculty");
 const col5 = db.collection("vol");
 
+
 app.get('/home', (req, res) => {
     res.send("It is a Home Page - New Page - New 2 Page");
 });
@@ -140,6 +141,7 @@ app.get('/display', async (req, res) => {
     var result = await col2.find().toArray();
     res.send(result);
 });
+
 
 app.delete('/delete', async (req, res) => {
     console.log(req.query);
