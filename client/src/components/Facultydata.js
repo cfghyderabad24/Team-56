@@ -6,7 +6,7 @@ export default function Student() {
   const [result, setResult] = useState(null);
 
   useEffect(() => {
-    axios.get('http://localhost:8081/display').then((response) => {
+    axios.get('http://localhost:8081/d').then((response) => {
       console.log(response.data);
       setResult(response.data);
     });
@@ -14,24 +14,29 @@ export default function Student() {
 
   function handleDelete(event) {
     const studentId = event.currentTarget.getAttribute("data-student");
-    axios.delete('http://localhost:8081/delete', {
+    axios.delete('http://localhost:8081/de', {
       params: {
         id: studentId
       }
     }).then((response) => {
       console.log(response.data);
       // Refresh the data after delete
-      axios.get('http://localhost:8081/display').then((response) => {
+      axios.get('http://localhost:8081/d').then((response) => {
         setResult(response.data);
       });
     });
   }
 
   function handleDownload() {
+    if (!result || result.length === 0) {
+      alert("No data available to download.");
+      return;
+    }
+
     const ws = XLSX.utils.json_to_sheet(result);
     const wb = XLSX.utils.book_new();
-    XLSX.utils.book_append_sheet(wb, ws, "Student");
-    XLSX.writeFile(wb, "Student.xlsx");
+    XLSX.utils.book_append_sheet(wb, ws, "view");
+    XLSX.writeFile(wb, "view.xlsx");
   }
 
   if (!result) {
@@ -49,17 +54,18 @@ export default function Student() {
         <table border="1">
           <thead>
             <tr>
-              <th>Parent's Name</th>
-              <th>Disability</th>
-              <th>Age</th>
+              <th>Name</th>
+              <th>Attendance</th>
+              {/* <th>Age</th>
               <th>Mobile</th>
-              
-              <th>Income</th>
-              <th>Area</th>
-              <th>Disability Information</th>
-              <th>Donations</th>
-              <th>Date</th>
-              <th>File Name</th>
+              <th>Email</th> */}
+               <th>ID</th>
+              {/* <th>Student Name</th> */}
+              {/* <th>Department</th>
+              <th>Purpose of Visit</th> */}
+              {/* <th>Date</th>
+              <th>Time</th>
+              <th>File Name</th> */}
               <th>Delete</th>
             </tr>
           </thead>

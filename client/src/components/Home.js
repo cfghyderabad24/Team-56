@@ -4,6 +4,7 @@ import './styles.css';
 const HomePage = () => {
     return (
         <div>
+
             <section className="hero">
                 <div className="container">
                     <div className="hero-text">
