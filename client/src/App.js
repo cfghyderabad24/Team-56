@@ -10,6 +10,7 @@ import Home from './components/Home';
 import Faculty from './components/Faculty';
 import ViewData from './components/ViewData';
 import Facultydata from './components/Facultydata';
+import Attendance from './components/Attendance';
 
 function App({ store }) {
   return (
@@ -28,6 +29,7 @@ function App({ store }) {
             <Route path="/facultydata" element={<Facultydata />} />           
             <Route path="/admission" element={<Admission />} />
             <Route path="/student" element={<Student />} />
+            <Route path='/getattendance' element={<Attendance />} /> 
           {/* Changed exact to element */}
           </Routes> {/* Changed Switch to Routes */}
         
