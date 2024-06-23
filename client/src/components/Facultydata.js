@@ -54,19 +54,24 @@ export default function Student() {
         <table border="1">
           <thead>
             <tr>
-              <th>Parent's Name</th>
-              <th>Gender</th>
-              <th>Age</th>
+              <th>Name</th>
+              <th>Attendance</th>
+              {/* <th>Age</th>
               <th>Mobile</th>
-              <th>Email</th>
-              <th>Student ID</th>
-              <th>Student Name</th>
-              <th>Department</th>
-              <th>Purpose of Visit</th>
-              <th>Date</th>
+              <th>Email</th> */}
+               <th>ID</th>
+              {/* <th>Student Name</th> */}
+              {/* <th>Department</th>
+              <th>Purpose of Visit</th> */}
+              {/* <th>Date</th>
               <th>Time</th>
+<<<<<<< HEAD
               <th>File Name</th>
               
+=======
+              <th>File Name</th> */}
+              <th>Delete</th>
+>>>>>>> ee5f3debde2dd34b4c2c9171fbee67ab27770b6e
             </tr>
           </thead>
           <tbody>

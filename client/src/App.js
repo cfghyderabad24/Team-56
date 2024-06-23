@@ -1,18 +1,25 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Appbar from './components/Appbar';
 import Entry from './components/Entry';
+<<<<<<< HEAD
 import Volunteer from './components/Volunteer';
+=======
+>>>>>>> ee5f3debde2dd34b4c2c9171fbee67ab27770b6e
 import Admission from './components/Admission';
 import Student from './components/Student';
 import Home from './components/Home';
 import Faculty from './components/Faculty';
 import ViewData from './components/ViewData';
 import Facultydata from './components/Facultydata';
+
 import Login from './components/Login';
 import Viewdatas from './components/Viewdatas';
 import Registration from './components/Registration';
 import Volunteerdata from './components/Volunteerdata';
 import Profile from './components/Profile';
+
+import Attendance from './components/Attendance';
+
 
 function App() {
   return (
@@ -36,6 +43,15 @@ function App() {
             <Route path="/profile" element={<Profile />} />
            
           </Routes>
+=======
+            <Route path="/facultydata" element={<Facultydata />} />           
+            <Route path="/admission" element={<Admission />} />
+            <Route path="/student" element={<Student />} />
+            <Route path='/getattendance' element={<Attendance />} /> 
+          {/* Changed exact to element */}
+          </Routes> {/* Changed Switch to Routes */}
+        
+>>>>>>> ee5f3debde2dd34b4c2c9171fbee67ab27770b6e
         </div>
       </div>
     </Router>

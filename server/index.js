@@ -15,8 +15,12 @@ const col = db.collection("user");
 const col2 = db.collection("student");
 const col3 = db.collection("view");
 const col4 = db.collection("faculty");
+<<<<<<< HEAD
 const col5 = db.collection("vol");
 
+=======
+const test_attendance = db.collection("test-attendance");
+>>>>>>> ee5f3debde2dd34b4c2c9171fbee67ab27770b6e
 
 app.get('/home', (req, res) => {
     res.send("It is a Home Page - New Page - New 2 Page");
@@ -173,6 +177,7 @@ app.delete('/de', async (req, res) => {
     res.send("deleted");
 });
 
+<<<<<<< HEAD
 app.get('/displ', async (req, res) => {
     var result = await col5.find().toArray();
     res.send(result);
@@ -186,4 +191,13 @@ app.delete('/dlet', async (req, res) => {
 
 app.listen(8081, () => {
     console.log("Server Running on http://localhost:8081");
+=======
+app.get('/getattendance', async (req, res) => {
+    var result = await test_attendance.find().toArray();
+    res.send(result);
+  });
+
+app.listen(5646, () => {
+    console.log("Server Running on http://localhost:5646");
+>>>>>>> ee5f3debde2dd34b4c2c9171fbee67ab27770b6e
 });
