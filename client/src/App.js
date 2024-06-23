@@ -1,10 +1,9 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Appbar from './components/Appbar';
 import Entry from './components/Entry';
-<<<<<<< HEAD
+
 import Volunteer from './components/Volunteer';
-=======
->>>>>>> ee5f3debde2dd34b4c2c9171fbee67ab27770b6e
+
 import Admission from './components/Admission';
 import Student from './components/Student';
 import Home from './components/Home';
@@ -43,7 +42,7 @@ function App() {
             <Route path="/profile" element={<Profile />} />
            
           </Routes>
-=======
+
             <Route path="/facultydata" element={<Facultydata />} />           
             <Route path="/admission" element={<Admission />} />
             <Route path="/student" element={<Student />} />
@@ -51,7 +50,7 @@ function App() {
           {/* Changed exact to element */}
           </Routes> {/* Changed Switch to Routes */}
         
->>>>>>> ee5f3debde2dd34b4c2c9171fbee67ab27770b6e
+
         </div>
       </div>
     </Router>
